@@ -1,1 +1,10 @@
-GET http://localhost:3000/sign-up
+POST http://localhost:3000/user/sign-up
+Content-Type: application/json
+
+{
+    "firstname":"mahmoud", 
+    "lastname": "ahmed",
+    "email":  "mahmoud.ali1842001@gmail.com",
+    "password": "123m456789",
+    "username": "MahmoudShakour"
+}
