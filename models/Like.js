@@ -2,11 +2,13 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const likeSchema = new Schema({
-  
+  timeCreated: { type: Date },
+  userId: { type: Schema.Types.objectId, ref: "User", required: true },
+  blogId: { type: Schema.Types.objectId, ref: "Blog", required: true },
 });
 
-userSchema.virtual("url").get(function () {
-  return "/user/" + this._id;
+likeSchema.virtual("url").get(function () {
+  return "/like/" + this._id;
 });
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("Like", likeSchema);
