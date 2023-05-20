@@ -25,6 +25,7 @@ router.post("/sign-up", async (req, res, next) => {
           password: hashedPassword,
           username: req.body.username,
           role: "user",
+          timeCreated: Date.now(),
         });
         await newUser.save();
         res.status("201").json({ message: "user is created successfully" });
@@ -74,6 +75,7 @@ router.put("/:username", authToken, async (req, res, next) => {
       password: req.user.password,
       role: req.user.role,
       _id: req.user._id,
+      timeCreated:req.user.timeCreated
     });
     await User.findByIdAndUpdate(req.user._id, newUser, {}).exec();
     res.json(newUser);

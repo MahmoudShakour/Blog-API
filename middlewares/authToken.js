@@ -11,7 +11,7 @@ const authToken = (req, res, next) => {
     if (err) {
       res
         .status(403)
-        .json({ message: "you are not authorized to use the resource" });
+        .json({ message: "token is no longer valid" });
     }
     req.user = user;
     next();
