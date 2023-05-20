@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const likeSchema = new Schema({
   timeCreated: { type: Date },
-  userId: { type: Schema.Types.objectId, ref: "User", required: true },
-  blogId: { type: Schema.Types.objectId, ref: "Blog", required: true },
+  userId: { type: Schema.Types.ObjectId, ref: "User", reqiured: true },
+  blogId: { type: Schema.Types.ObjectId, ref: "Blog", reqiured: true },
 });
 
 likeSchema.virtual("url").get(function () {
