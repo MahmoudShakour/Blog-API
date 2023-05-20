@@ -2,9 +2,38 @@ POST http://localhost:3000/user/sign-up
 Content-Type: application/json
 
 {
-    "firstname":"mahmoud", 
-    "lastname": "ahmed",
-    "email":  "mahmoud.ali1842001@gmail.com",
+    "firstname":"khaled", 
+    "lastname": "hegazy",
+    "email":  "khaled.hegazy1842001@gmail.com",
     "password": "123m456789",
-    "username": "MahmoudShakour"
+    "username": "KhaledHegazy"
 }
+
+###
+
+POST http://localhost:3000/user/sign-in 
+Content-Type: application/json
+
+{
+    "username":"MahmoudShakour",
+    "password":"123m456789"
+}
+
+
+###
+
+GET http://localhost:3000/user/MahmoudShakour 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY4Njc3YzAwMjI0ZDgwNDQzNmQ5ZDkiLCJmaXJzdG5hbWUiOiJtYWhtb3VkIiwibGFzdG5hbWUiOiJhaG1lZCIsImVtYWlsIjoibWFobW91ZC5hbGkxODQyMDAxQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJExudmVqekI0NWFnQ1pMRDFFTHdIbC5QcDRyOG5LcWJjc0wvQXJueDBXUjV4UGwyd0twcUZ1IiwidXNlcm5hbWUiOiJNYWhtb3VkU2hha291ciIsInJvbGUiOiJhZG1pbiIsIl9fdiI6MCwiaWF0IjoxNjg0NTc1NzExfQ.W07V-bRebKd1Tk9_u-XrLZvPlwy2VafDLVoCrJH_Iws
+
+###
+
+PUT http://localhost:3000/user/KhadHegazy
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDY4Njc3YzAwMjI0ZDgwNDQzNmQ5ZDkiLCJmaXJzdG5hbWUiOiJtYWhtb3VkIiwibGFzdG5hbWUiOiJhaG1lZCIsImVtYWlsIjoibWFobW91ZC5hbGkxODQyMDAxQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJExudmVqekI0NWFnQ1pMRDFFTHdIbC5QcDRyOG5LcWJjc0wvQXJueDBXUjV4UGwyd0twcUZ1IiwidXNlcm5hbWUiOiJNYWhtb3VkU2hha291ciIsInJvbGUiOiJhZG1pbiIsIl9fdiI6MCwiaWF0IjoxNjg0NTc1NzExfQ.W07V-bRebKd1Tk9_u-XrLZvPlwy2VafDLVoCrJH_Iws
+Content-Type: application/json
+
+{
+    "firstname":"mahmoud",
+    "lastname":"ahmed"
+}
+
+###
